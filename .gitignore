@@ -37,3 +37,6 @@ desktop.ini
 
 # Images
 /public/img/
+
+# Node
+/node_modules
