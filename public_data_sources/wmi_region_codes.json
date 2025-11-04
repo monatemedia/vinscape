@@ -1,0 +1,754 @@
+[
+  {
+    "range": "AA-AH",
+    "country": "South Africa"
+  },
+  {
+    "range": "AJ-AK",
+    "country": "Ivory Coast"
+  },
+  {
+    "range": "AL-AM",
+    "country": "Lesotho"
+  },
+  {
+    "range": "AN-AP",
+    "country": "Botswana"
+  },
+  {
+    "range": "AR-AS",
+    "country": "Namibia"
+  },
+  {
+    "range": "AT-AU",
+    "country": "Madagascar"
+  },
+  {
+    "range": "AV-AW",
+    "country": "Mauritius"
+  },
+  {
+    "range": "AX-AY",
+    "country": "Tunisia"
+  },
+  {
+    "range": "AZ-A1",
+    "country": "Cyprus"
+  },
+  {
+    "range": "A2-A3",
+    "country": "Zimbabwe"
+  },
+  {
+    "range": "A4-A5",
+    "country": "Mozambique"
+  },
+  {
+    "range": "A6-A0",
+    "country": "Africa"
+  },
+  {
+    "range": "BA-BB",
+    "country": "Angola"
+  },
+  {
+    "range": "BC",
+    "country": "Ethiopia"
+  },
+  {
+    "range": "BD-BE",
+    "country": "Africa"
+  },
+  {
+    "range": "BF-BG",
+    "country": "Kenya"
+  },
+  {
+    "range": "BH",
+    "country": "Rwanda"
+  },
+  {
+    "range": "BJ-BK",
+    "country": "Africa"
+  },
+  {
+    "range": "BL",
+    "country": "Nigeria"
+  },
+  {
+    "range": "BM-BP",
+    "country": "Africa"
+  },
+  {
+    "range": "BR",
+    "country": "Algeria"
+  },
+  {
+    "range": "BS",
+    "country": "Africa"
+  },
+  {
+    "range": "BT",
+    "country": "Eswatini"
+  },
+  {
+    "range": "BU",
+    "country": "Uganda"
+  },
+  {
+    "range": "BV-B2",
+    "country": "Africa"
+  },
+  {
+    "range": "B3-B4",
+    "country": "Libya"
+  },
+  {
+    "range": "B5-B0",
+    "country": "Africa"
+  },
+  {
+    "range": "CA-CB",
+    "country": "Egypt"
+  },
+  {
+    "range": "CC-CE",
+    "country": "Africa"
+  },
+  {
+    "range": "CF-CG",
+    "country": "Morocco"
+  },
+  {
+    "range": "CH-CK",
+    "country": "Africa"
+  },
+  {
+    "range": "CL-CM",
+    "country": "Zambia"
+  },
+  {
+    "range": "CN-C0",
+    "country": "Africa"
+  },
+  {
+    "range": "EA-E0",
+    "country": "Russia"
+  },
+  {
+    "range": "HA-H0",
+    "country": "China"
+  },
+  {
+    "range": "JA-J0",
+    "country": "Japan"
+  },
+  {
+    "range": "KA-KE",
+    "country": "Asia"
+  },
+  {
+    "range": "KF-KH",
+    "country": "Israel"
+  },
+  {
+    "range": "KJ-KK",
+    "country": "Asia"
+  },
+  {
+    "range": "KL-KR",
+    "country": "South Korea"
+  },
+  {
+    "range": "KS-KT",
+    "country": "Jordan"
+  },
+  {
+    "range": "KU-KZ",
+    "country": "Asia"
+  },
+  {
+    "range": "K1-K3",
+    "country": "South Korea"
+  },
+  {
+    "range": "K4",
+    "country": "Asia"
+  },
+  {
+    "range": "K5",
+    "country": "Kyrgyzstan"
+  },
+  {
+    "range": "K6-K0",
+    "country": "Asia"
+  },
+  {
+    "range": "LA-L0",
+    "country": "China"
+  },
+  {
+    "range": "MA-ME",
+    "country": "India"
+  },
+  {
+    "range": "MF-MK",
+    "country": "Indonesia"
+  },
+  {
+    "range": "ML-MR",
+    "country": "Thailand"
+  },
+  {
+    "range": "MS",
+    "country": "Myanmar"
+  },
+  {
+    "range": "MT",
+    "country": "Asia"
+  },
+  {
+    "range": "MU",
+    "country": "Mongolia"
+  },
+  {
+    "range": "MV-MW",
+    "country": "Asia"
+  },
+  {
+    "range": "MX",
+    "country": "Kazakhstan"
+  },
+  {
+    "range": "MY-M0",
+    "country": "India"
+  },
+  {
+    "range": "NA-NE",
+    "country": "Iran"
+  },
+  {
+    "range": "NF-NG",
+    "country": "Pakistan"
+  },
+  {
+    "range": "NH",
+    "country": "Asia"
+  },
+  {
+    "range": "NJ",
+    "country": "Iraq"
+  },
+  {
+    "range": "NK",
+    "country": "Asia"
+  },
+  {
+    "range": "NL-NR",
+    "country": "Turkey"
+  },
+  {
+    "range": "NS-NT",
+    "country": "Uzbekistan"
+  },
+  {
+    "range": "NU",
+    "country": "Asia"
+  },
+  {
+    "range": "NV",
+    "country": "Azerbaijan"
+  },
+  {
+    "range": "NW",
+    "country": "Asia"
+  },
+  {
+    "range": "NX",
+    "country": "Tajikistan"
+  },
+  {
+    "range": "NY",
+    "country": "Armenia"
+  },
+  {
+    "range": "NZ",
+    "country": "Asia"
+  },
+  {
+    "range": "N1-N5",
+    "country": "Iran"
+  },
+  {
+    "range": "N6",
+    "country": "Asia"
+  },
+  {
+    "range": "N7-N8",
+    "country": "Turkey"
+  },
+  {
+    "range": "N9-N0",
+    "country": "Asia"
+  },
+  {
+    "range": "PA-PC",
+    "country": "Philippines"
+  },
+  {
+    "range": "PD-PE",
+    "country": "Asia"
+  },
+  {
+    "range": "PF-PG",
+    "country": "Singapore"
+  },
+  {
+    "range": "PH-PK",
+    "country": "Asia"
+  },
+  {
+    "range": "PL-PR",
+    "country": "Malaysia"
+  },
+  {
+    "range": "PS-PT",
+    "country": "Bangladesh"
+  },
+  {
+    "range": "PU-P4",
+    "country": "Asia"
+  },
+  {
+    "range": "P5-P0",
+    "country": "India"
+  },
+  {
+    "range": "RA-RB",
+    "country": "United Arab Emirates"
+  },
+  {
+    "range": "RC-RE",
+    "country": "Asia"
+  },
+  {
+    "range": "RF-RK",
+    "country": "Taiwan"
+  },
+  {
+    "range": "RL-RN",
+    "country": "Vietnam"
+  },
+  {
+    "range": "RP",
+    "country": "Laos"
+  },
+  {
+    "range": "RR",
+    "country": "Asia"
+  },
+  {
+    "range": "RS-RT",
+    "country": "Saudi Arabia"
+  },
+  {
+    "range": "RU-RW",
+    "country": "Russia"
+  },
+  {
+    "range": "RX-RZ",
+    "country": "Asia"
+  },
+  {
+    "range": "R1-R7",
+    "country": "Hong Kong"
+  },
+  {
+    "range": "R8-R0",
+    "country": "Asia"
+  },
+  {
+    "range": "SA-SM",
+    "country": "United Kingdom"
+  },
+  {
+    "range": "SN-ST",
+    "country": "Germany"
+  },
+  {
+    "range": "SU-SZ",
+    "country": "Poland"
+  },
+  {
+    "range": "S1-S2",
+    "country": "Latvia"
+  },
+  {
+    "range": "S3",
+    "country": "Georgia"
+  },
+  {
+    "range": "S4",
+    "country": "Iceland"
+  },
+  {
+    "range": "S5-S0",
+    "country": "Europe"
+  },
+  {
+    "range": "TA-TH",
+    "country": "Switzerland"
+  },
+  {
+    "range": "TJ-TP",
+    "country": "Czech Republic"
+  },
+  {
+    "range": "TR-TV",
+    "country": "Hungary"
+  },
+  {
+    "range": "TW-T2",
+    "country": "Portugal"
+  },
+  {
+    "range": "T3-T5",
+    "country": "Serbia"
+  },
+  {
+    "range": "T6",
+    "country": "Andorra"
+  },
+  {
+    "range": "T7-T8",
+    "country": "Netherlands"
+  },
+  {
+    "range": "T9-T0",
+    "country": "Europe"
+  },
+  {
+    "range": "UA-UC",
+    "country": "Spain"
+  },
+  {
+    "range": "UD-UG",
+    "country": "Europe"
+  },
+  {
+    "range": "UH-UM",
+    "country": "Denmark"
+  },
+  {
+    "range": "UN-UR",
+    "country": "Ireland"
+  },
+  {
+    "range": "US-UT",
+    "country": "Europe"
+  },
+  {
+    "range": "UU-UX",
+    "country": "Romania"
+  },
+  {
+    "range": "UY-UZ",
+    "country": "Europe"
+  },
+  {
+    "range": "U1-U2",
+    "country": "North Macedonia"
+  },
+  {
+    "range": "U3-U4",
+    "country": "Europe"
+  },
+  {
+    "range": "U5-U7",
+    "country": "Slovakia"
+  },
+  {
+    "range": "U8-U0",
+    "country": "Bosnia and Herzegovina"
+  },
+  {
+    "range": "VA-VE",
+    "country": "Austria"
+  },
+  {
+    "range": "VF-VR",
+    "country": "France"
+  },
+  {
+    "range": "VS-VW",
+    "country": "Spain"
+  },
+  {
+    "range": "VX-V2",
+    "country": "France"
+  },
+  {
+    "range": "V3-V5",
+    "country": "Croatia"
+  },
+  {
+    "range": "V6-V8",
+    "country": "Estonia"
+  },
+  {
+    "range": "V9-V0",
+    "country": "Europe"
+  },
+  {
+    "range": "WA-W0",
+    "country": "Germany"
+  },
+  {
+    "range": "XA-XC",
+    "country": "Bulgaria"
+  },
+  {
+    "range": "XD-XE",
+    "country": "Russia"
+  },
+  {
+    "range": "XF-XH",
+    "country": "Greece"
+  },
+  {
+    "range": "XJ-XK",
+    "country": "Russia"
+  },
+  {
+    "range": "XL-XR",
+    "country": "Netherlands"
+  },
+  {
+    "range": "XS-XW",
+    "country": "Russia"
+  },
+  {
+    "range": "XX-XY",
+    "country": "Luxembourg"
+  },
+  {
+    "range": "XZ-X0",
+    "country": "Russia"
+  },
+  {
+    "range": "YA-YE",
+    "country": "Belgium"
+  },
+  {
+    "range": "YF-YK",
+    "country": "Finland"
+  },
+  {
+    "range": "YL-YM",
+    "country": "Europe"
+  },
+  {
+    "range": "YN",
+    "country": "Malta"
+  },
+  {
+    "range": "YP-YR",
+    "country": "Europe"
+  },
+  {
+    "range": "YS-YW",
+    "country": "Sweden"
+  },
+  {
+    "range": "YX-Y2",
+    "country": "Norway"
+  },
+  {
+    "range": "Y3-Y5",
+    "country": "Belarus"
+  },
+  {
+    "range": "Y6-Y8",
+    "country": "Ukraine"
+  },
+  {
+    "range": "Y9-Y0",
+    "country": "Europe"
+  },
+  {
+    "range": "ZA-ZU",
+    "country": "Italy"
+  },
+  {
+    "range": "ZV-ZW",
+    "country": "Europe"
+  },
+  {
+    "range": "ZX-ZZ",
+    "country": "Slovenia"
+  },
+  {
+    "range": "Z1",
+    "country": "San Marino"
+  },
+  {
+    "range": "Z2",
+    "country": "Europe"
+  },
+  {
+    "range": "Z3-Z5",
+    "country": "Lithuania"
+  },
+  {
+    "range": "Z6-Z0",
+    "country": "Russia"
+  },
+  {
+    "range": "1A-10",
+    "country": "United States"
+  },
+  {
+    "range": "2A-25",
+    "country": "Canada"
+  },
+  {
+    "range": "26-20",
+    "country": "North America"
+  },
+  {
+    "range": "3A-3X",
+    "country": "Mexico"
+  },
+  {
+    "range": "3Y-33",
+    "country": "North America"
+  },
+  {
+    "range": "34",
+    "country": "Nicaragua"
+  },
+  {
+    "range": "35",
+    "country": "Dominican Republic"
+  },
+  {
+    "range": "36",
+    "country": "Honduras"
+  },
+  {
+    "range": "37",
+    "country": "Panama"
+  },
+  {
+    "range": "38-39",
+    "country": "Puerto Rico"
+  },
+  {
+    "range": "30",
+    "country": "North America"
+  },
+  {
+    "range": "4A-40",
+    "country": "United States"
+  },
+  {
+    "range": "5A-50",
+    "country": "United States"
+  },
+  {
+    "range": "6A-6X",
+    "country": "Australia"
+  },
+  {
+    "range": "6Y-61",
+    "country": "New Zealand"
+  },
+  {
+    "range": "62-60",
+    "country": "Oceania"
+  },
+  {
+    "range": "7A-7E",
+    "country": "New Zealand"
+  },
+  {
+    "range": "7F-70",
+    "country": "United States"
+  },
+  {
+    "range": "8A-8E",
+    "country": "Argentina"
+  },
+  {
+    "range": "8F-8G",
+    "country": "Chile"
+  },
+  {
+    "range": "8H-8K",
+    "country": "South America"
+  },
+  {
+    "range": "8L-8N",
+    "country": "Ecuador"
+  },
+  {
+    "range": "8P-8R",
+    "country": "South America"
+  },
+  {
+    "range": "8S-8T",
+    "country": "Peru"
+  },
+  {
+    "range": "8U-8W",
+    "country": "South America"
+  },
+  {
+    "range": "8X-8Z",
+    "country": "Venezuela"
+  },
+  {
+    "range": "81",
+    "country": "SA"
+  },
+  {
+    "range": "82",
+    "country": "Bolivia"
+  },
+  {
+    "range": "83",
+    "country": "SA"
+  },
+  {
+    "range": "84",
+    "country": "Costa Rica"
+  },
+  {
+    "range": "85-80",
+    "country": "South America"
+  },
+  {
+    "range": "9A-9E",
+    "country": "Brazil"
+  },
+  {
+    "range": "9F-9G",
+    "country": "Colombia"
+  },
+  {
+    "range": "9H-9R",
+    "country": "South America"
+  },
+  {
+    "range": "9S-9V",
+    "country": "Uruguay"
+  },
+  {
+    "range": "9W-9Z",
+    "country": "South America"
+  },
+  {
+    "range": "91-90",
+    "country": "Brazil"
+  }
+]
