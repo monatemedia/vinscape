@@ -2,6 +2,7 @@
 from app import db # Assuming 'db' is initialized in app/__init__.py
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.orm import relationship
+from sqlalchemy.ext.hybrid import hybrid_property
 
 class Country(db.Model, SerializerMixin):
     __tablename__ = 'countries'
@@ -18,11 +19,9 @@ class Country(db.Model, SerializerMixin):
     calling_code = db.Column(db.String(10))
     tld = db.Column(db.String(10))
     flag_emoji = db.Column(db.String(16))
-    is_active = db.Column(db.Boolean, default=True)
-    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
 
-    # Relationship to WmiRegionCode
-    wmi_codes = relationship("WmiRegionCode", back_populates="country")
+    # Relationship to WmiRegion
+    wmi_codes = relationship("WmiRegion", back_populates="country")
 
     def __repr__(self):
         return f"<Country {self.common_name} ({self.iso_alpha2})>"

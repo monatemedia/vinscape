@@ -4,9 +4,9 @@ import json
 import re
 from pathlib import Path
 from app import db # Import the SQLAlchemy db object
-from app.models.manufacturer import Manufacturer # New model name
 from app.models.country import Country
-from app.models.wmi import WmiRegionCode # New model name for 2-char codes
+from app.models.wmi_factory import WmiFactory
+from app.models.wmi_region import WmiRegion
 
 # Configuration
 FACTORY_DATA_FILE = Path("public_data_sources") / "wmi_factory_codes.json"
@@ -153,7 +153,7 @@ def seed_wmi_factory_codes():
                 region_code = wmi[:2]
 
                 # Find the country/region entry using the WmiRegionCode lookup
-                wmi_region_entry = WmiRegionCode.query.filter_by(code=region_code).first()
+                wmi_region_entry = WmiRegion.query.filter_by(code=region_code).first()
 
                 country_id = None
                 region_name = None
@@ -170,7 +170,7 @@ def seed_wmi_factory_codes():
                         country_id = country_obj.id # Link the manufacturer to the Country record
 
                 # Check if this WMI already exists (Manufacturer.wmi is unique)
-                existing = Manufacturer.query.filter_by(wmi=wmi).first()
+                existing = WmiFactory.query.filter_by(wmi=wmi).first()
 
                 if existing:
                     # MERGE LOGIC: Combine manufacturer names if they differ
@@ -185,7 +185,7 @@ def seed_wmi_factory_codes():
                     continue
 
                 # Create new Manufacturer record
-                factory_code = Manufacturer(
+                factory_code = WmiFactory(
                     wmi=wmi,
                     name=manufacturer,
                     country_id=country_id, # Foreign key to Country

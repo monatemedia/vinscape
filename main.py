@@ -19,7 +19,8 @@ DB_PATH = Path(__file__).parent / "instance" / "vin.db"
 try:
     from app import create_app, db
     from app.models.country import Country 
-    from app.models.wmi import WmiRegionCode
+    from app.models.wmi_region import WmiRegion # <-- CORRECTED
+    from app.models.wmi_factory import WmiFactory # <-- Also add WmiFactory for completeness
 except ImportError as e:
     print(f"❌ Critical Error: Could not import app components. Ensure 'app' directory is set up correctly. Details: {e}")
     sys.exit(1)
@@ -89,7 +90,7 @@ def run_all_scripts(app: Flask):
 
             # Optional: Verify final count
             total_countries = Country.query.count()
-            total_wmi_codes = WmiRegionCode.query.count()
+            total_wmi_codes = WmiRegion.query.count()
             print("\n--- Database Verification ---")
             print(f"Total Countries/Regions in DB: {total_countries}")
             print(f"Total WMI Region Codes in DB: {total_wmi_codes}")

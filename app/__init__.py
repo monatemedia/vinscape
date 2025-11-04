@@ -30,6 +30,8 @@ def create_app(config_object='config.Config'):
     db.init_app(app)
 
     # 4. Import models so SQLAlchemy knows about them (Crucial for db.create_all() in main.py)
-    from app.models import country, wmi 
+    from app.models import country 
+    from app.models import wmi_region
+    from app.models import wmi_factory
 
     return app

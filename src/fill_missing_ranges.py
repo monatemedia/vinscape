@@ -9,7 +9,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 # Import the SQLAlchemy db object and models
 from app import db
 from app.models.country import Country
-from app.models.wmi import WmiRegionCode # <-- Changed to the current model name
+from app.models.wmi_region import WmiRegion
 
 # Valid VIN characters in order (excluding I, O, Q)
 VIN_CHARACTERS = [
@@ -40,7 +40,7 @@ def fill_missing_wmi_ranges():
                 all_possible_codes.append(first_char + second_char)
                 
         # 2. Get all existing codes from the WmiRegionCode table
-        existing_codes = set(code.code for code in WmiRegionCode.query.all())
+        existing_codes = set(code.code for code in WmiRegion.query.all())
                 
         # 3. Find missing codes
         missing_codes = set(all_possible_codes) - existing_codes
@@ -67,7 +67,7 @@ def fill_missing_wmi_ranges():
             print(f"\n🔧 Filling range {first_char}: {len(codes)} codes")
             
             for code in codes:
-                wmi_code = WmiRegionCode( # <-- Use the correct model
+                wmi_code = WmiRegion( # <-- Use the correct model
                     code=code,
                     country_id=unknown_country.id
                 )

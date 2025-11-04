@@ -121,7 +121,6 @@ def seed_countries(countries_data):
                 calling_code=get_calling_code(country_data.get('idd', {})),
                 tld=country_data.get('tld', [None])[0],
                 flag_emoji=country_data.get('flag'),
-                is_active=True
             )
             db.session.add(country)
 
@@ -139,7 +138,6 @@ def seed_countries(countries_data):
                 region='Unknown', 
                 subregion='Unknown', 
                 flag_emoji='🏳', 
-                is_active=True
             )
             db.session.add(unknown_country)
             print(f"  ✓ Unknown (special catch-all country)")

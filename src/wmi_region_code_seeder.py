@@ -6,7 +6,7 @@ from pathlib import Path
 # Import the models and db session
 from app import db
 from app.models.country import Country
-from app.models.wmi import WmiRegionCode 
+from app.models.wmi_region import WmiRegion
 
 # Configuration
 WMI_DATA_FILE = Path("public_data_sources") / "wmi_region_codes.json"
@@ -115,7 +115,6 @@ def find_or_create_region(location_name):
             region=location_name,
             subregion=location_name,
             flag_emoji='🌐',
-            is_active=True
         )
         db.session.add(new_region)
         
@@ -189,7 +188,7 @@ def seed_wmi_region_codes():
             # Insert each code
             for code in codes:
                 # Check if this code already exists for this country
-                existing = WmiRegionCode.query.filter_by(
+                existing = WmiRegion.query.filter_by(
                     code=code,
                     country_id=country_or_region.id
                 ).first()
@@ -199,7 +198,7 @@ def seed_wmi_region_codes():
                     continue
                 
                 # Create new WMI region code
-                wmi_code = WmiRegionCode(
+                wmi_code = WmiRegion(
                     code=code,
                     country=country_or_region
                 )

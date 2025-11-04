@@ -33,7 +33,7 @@ desktop.ini
 .env.local
 
 # Logos
-/logos/
+/public_data_sources/brands/
 
 # Images
 /img/

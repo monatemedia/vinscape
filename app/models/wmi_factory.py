@@ -1,10 +1,10 @@
-# app/models/manufacturer.py
-from app import db # Assuming 'db' is initialized in app/__init__.py
+# app/models/wmi_factory.py
+from app import db 
 from sqlalchemy_serializer import SerializerMixin
-from sqlalchemy.orm import relationship # <-- Ensure this is imported for relationships
+from sqlalchemy.orm import relationship 
 
-class Manufacturer(db.Model, SerializerMixin):
-    __tablename__ = 'manufacturers'
+class WmiFactory(db.Model, SerializerMixin):
+    __tablename__ = 'wmi_factories' # Renamed table
 
     id = db.Column(db.Integer, primary_key=True)
     
@@ -23,12 +23,11 @@ class Manufacturer(db.Model, SerializerMixin):
     
     # Status flags
     is_active = db.Column(db.Boolean, default=True)
-    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
+    # created_at column REMOVED
 
     def __repr__(self):
-        return f"<Manufacturer {self.wmi} ({self.name})>"
+        return f"<WmiFactory {self.wmi} ({self.name})>"
 
-    # Helper function to find a manufacturer by its WMI
     @classmethod
     def find_by_wmi(cls, wmi_code):
         return cls.query.filter(cls.wmi == wmi_code.upper()).first()
