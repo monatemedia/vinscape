@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIN Decoder & Generator Pro</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .card-icon {
+            font-size: 48px;
+        }
+        
+        .card-title {
+            font-size: 28px;
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        .card-subtitle {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            color: #4a5568;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        button.secondary:hover {
+            background: #f7fafc;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 16px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result.valid {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #86efac;
+            display: block;
+        }
+        
+        .result.invalid {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #fca5a5;
+            display: block;
+        }
+        
+        .status {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .status.valid { color: #16a34a; }
+        .status.invalid { color: #dc2626; }
+        
+        .status-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .valid .status-icon {
+            background: #16a34a;
+            color: white;
+        }
+        
+        .invalid .status-icon {
+            background: #dc2626;
+            color: white;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info-item-with-image {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .info-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .info-label {
+            font-size: 11px;
+            color: #718096;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .info-value {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 600;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .info-image {
+            height: 50px;
+            width: auto;
+            max-width: 80px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        
+        .flag {
+            font-size: 50px;
+            line-height: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .flag.placeholder-flag {
+            transform: scale(0.7);
+        }
+        
+        .logo-carousel {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .logo-carousel img {
+            height: 50px;
+            width: auto;
+            max-width: 80px;
+            object-fit: contain;
+        }
+        
+        .error-message {
+            color: #991b1b;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .vin-display {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .loading {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚗 VIN Decoder & Generator Pro</h1>
+        <p>Powered by comprehensive database with 2,300+ manufacturers and 250+ countries</p>
+    </div>
+    
+    <div class="main-container">
+        <!-- Decoder Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🔍</div>
+                <div>
+                    <div class="card-title">VIN Decoder</div>
+                    <div class="card-subtitle">Decode any 17-character VIN</div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="vinInput">Vehicle Identification Number</label>
+                <input 
+                    type="text" 
+                    id="vinInput" 
+                    maxlength="17" 
+                    placeholder="e.g., 1HGBH41JXMN109186"
+                    autocomplete="off"
+                >
+            </div>
+            
+            <div class="button-group">
+                <button onclick="decodeVIN()">🔍 Decode VIN</button>
+            </div>
+            
+            <div id="decodeResult" class="result"></div>
+        </div>
+        
+        <!-- Generator Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">✨</div>
+                <div>
+                    <div class="card-title">VIN Generator</div>
+                    <div class="card-subtitle">Generate valid random VINs</div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="generatedVIN">Generated VIN</label>
+                <input 
+                    type="text" 
+                    id="generatedVIN" 
+                    readonly 
+                    placeholder="Click 'Generate VIN' below"
+                >
+            </div>
+            
+            <div class="button-group">
+                <button onclick="generateVIN()">✨ Generate VIN</button>
+                <button class="secondary" onclick="copyVIN()">📋 Copy</button>
+            </div>
+            
+            <div id="generateResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script>
+        function getRegionImage(region) {
+            if (!region || region === 'Unknown') return null;
+            // Map region names to image files
+            const regionMap = {
+                'Africa': 'Africa.png',
+                'Asia': 'Asia.png',
+                'Europe': 'Europe.png',
+                'North America': 'North America.png',
+                'Oceania': 'Oceania.png',
+                'South America': 'South America.png'
+            };
+            return regionMap[region] || null;
+        }
+        
+        function showResult(elementId, isValid, data) {
+            const resultDiv = document.getElementById(elementId);
+            
+            if (data.error) {
+                resultDiv.className = 'result invalid';
+                resultDiv.innerHTML = `
+                    <div class="status invalid">
+                        <div class="status-icon">✗</div>
+                        <span>Invalid VIN</span>
+                    </div>
+                    <div class="error-message">${data.error}</div>
+                `;
+                return;
+            }
+            
+            const checkStatus = data.check_digit_valid ? '✓ Valid' : '✗ Invalid';
+            const checkColor = data.check_digit_valid ? '#16a34a' : '#dc2626';
+            
+            // Region info with image
+            const regionImage = getRegionImage(data.region);
+            const regionHTML = regionImage 
+                ? `
+                    <div class="info-item info-item-with-image">
+                        <div class="info-item-content">
+                            <div class="info-label">Region</div>
+                            <div class="info-value">${data.region || 'Unknown'}</div>
+                        </div>
+                        <img src="/img/regions/${regionImage}" alt="${data.region}" class="info-image">
+                    </div>
+                `
+                : `
+                    <div class="info-item info-item-with-image">
+                        <div class="info-item-content">
+                            <div class="info-label">Region</div>
+                            <div class="info-value">${data.region || 'Unknown'}</div>
+                        </div>
+                        <span class="flag info-image placeholder-flag">🏳</span>
+                    </div>
+                `;
+            
+            // Country info with flag
+            const countryFlagClass = (data.country_flag === '🏳️' || data.country_flag === '🏳' || !data.country_flag) ? 'flag info-image placeholder-flag' : 'flag info-image';
+            const countryHTML = `
+                <div class="info-item info-item-with-image">
+                    <div class="info-item-content">
+                        <div class="info-label">Country</div>
+                        <div class="info-value">${data.country || 'Unknown'}</div>
+                    </div>
+                    <span class="${countryFlagClass}">${data.country_flag || '🏳'}</span>
+                </div>
+            `;
+            
+            // Manufacturer info with logos
+            let manufacturerHTML;
+            if (data.manufacturer_logos && data.manufacturer_logos.length > 0) {
+                const logosHTML = data.manufacturer_logos.map(logo => 
+                    `<img src="/img/logos/${logo}" alt="Logo">`
+                ).join('');
+                
+                // If more than 2 logos, stack them below the text
+                if (data.manufacturer_logos.length > 2) {
+                    manufacturerHTML = `
+                        <div class="info-item" style="grid-column: 1 / -1;">
+                            <div class="info-label">Manufacturer</div>
+                            <div class="info-value">${data.manufacturer}</div>
+                            <div class="logo-carousel" style="margin-top: 12px;">
+                                ${logosHTML}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    manufacturerHTML = `
+                        <div class="info-item info-item-with-image" style="grid-column: 1 / -1;">
+                            <div class="info-item-content">
+                                <div class="info-label">Manufacturer</div>
+                                <div class="info-value">${data.manufacturer}</div>
+                            </div>
+                            <div class="logo-carousel">
+                                ${logosHTML}
+                            </div>
+                        </div>
+                    `;
+                }
+            } else {
+                manufacturerHTML = `
+                    <div class="info-item info-item-with-image" style="grid-column: 1 / -1;">
+                        <div class="info-item-content">
+                            <div class="info-label">Manufacturer</div>
+                            <div class="info-value">${data.manufacturer}</div>
+                        </div>
+                        <span class="flag info-image placeholder-flag">🏳</span>
+                    </div>
+                `;
+            }
+            
+            resultDiv.className = 'result valid';
+            resultDiv.innerHTML = `
+                <div class="status valid">
+                    <div class="status-icon">✓</div>
+                    <span>VIN Decoded Successfully</span>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item" style="grid-column: 1 / -1;">
+                        <div class="info-label">VIN Number</div>
+                        <div class="info-value vin-display">${data.vin}</div>
+                    </div>
+                    ${regionHTML}
+                    ${countryHTML}
+                    ${manufacturerHTML}
+                    
+                    <div class="info-item">
+                        <div class="info-label">Factory/WMI Region</div>
+                        <div class="info-value">${data.factory_region || 'Unknown'}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Model Year</div>
+                        <div class="info-value">${data.model_year}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Check Digit</div>
+                        <div class="info-value" style="color: ${checkColor}">${data.check_digit} (${checkStatus})</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">WMI Code</div>
+                        <div class="info-value">${data.wmi}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Plant Code</div>
+                        <div class="info-value">${data.plant_code}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Serial Number</div>
+                        <div class="info-value">${data.serial_number}</div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        async function decodeVIN() {
+            const input = document.getElementById('vinInput').value.trim().toUpperCase();
+            const resultDiv = document.getElementById('decodeResult');
+            
+            if (!input) {
+                resultDiv.className = 'result invalid';
+                resultDiv.innerHTML = `
+                    <div class="status invalid">
+                        <div class="status-icon">✗</div>
+                        <span>Invalid VIN</span>
+                    </div>
+                    <div class="error-message">Please enter a VIN number</div>
+                `;
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/decode', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vin: input })
+                });
+                
+                const data = await response.json();
+                showResult('decodeResult', !data.error, data);
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.className = 'result invalid';
+                resultDiv.innerHTML = `
+                    <div class="status invalid">
+                        <div class="status-icon">✗</div>
+                        <span>Error</span>
+                    </div>
+                    <div class="error-message">Failed to decode VIN. Please try again.</div>
+                `;
+            }
+        }
+        
+        async function generateVIN() {
+            const input = document.getElementById('generatedVIN');
+            const btn = document.querySelector('button[onclick="generateVIN()"]');
+            
+            if (btn) {
+                btn.classList.add('loading');
+                btn.textContent = 'Generating...';
+            }
+            
+            try {
+                const response = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                input.value = data.vin;
+                showResult('generateResult', true, data);
+            } catch (error) {
+                console.error('Error:', error);
+            } finally {
+                if (btn) {
+                    btn.classList.remove('loading');
+                    btn.textContent = '✨ Generate VIN';
+                }
+            }
+        }
+        
+        function copyVIN() {
+            const input = document.getElementById('generatedVIN');
+            const btn = document.querySelector('button[onclick="copyVIN()"]');
+            
+            if (!input.value) return;
+            
+            navigator.clipboard.writeText(input.value).then(() => {
+                if (btn) {
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Copied!';
+                    setTimeout(() => btn.textContent = originalText, 1500);
+                }
+            });
+        }
+        
+        // Enter key support
+        document.getElementById('vinInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') decodeVIN();
+        });
+        
+        // Auto-generate on load
+        window.addEventListener('load', generateVIN);
+    </script>
+</body>
+</html>

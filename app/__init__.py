@@ -33,5 +33,10 @@ def create_app(config_object='config.Config'):
     from app.models import country 
     from app.models import wmi_region
     from app.models import wmi_factory
+    from app.models import factory_logo
+
+    # Import and register the blueprint for front-end routes
+    from app.routes import bp
+    app.register_blueprint(bp)
 
     return app

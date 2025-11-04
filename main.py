@@ -35,6 +35,8 @@ from src.wmi_region_code_seeder import seed_wmi_region_codes
 from src.scrape_wmi_factories import main as scrape_factories
 from src.fill_missing_ranges import fill_missing_wmi_ranges
 from src.wmi_factory_code_seeder import seed_wmi_factory_codes
+from src.import_regions import import_regions
+from src.import_logos import import_logos
 
 # ----------------------------------------------------------------------
 
@@ -87,6 +89,14 @@ def run_all_scripts(app: Flask):
             # 6. Run the WMI Factory Code Seeder (Reads JSON, uses models to insert)
             print("\n--- Running WMI Factory Code Seeder ---")
             seed_wmi_factory_codes() 
+            
+            # 7. Run the Region Image Importer (Independent of DB)
+            print("\n--- Running Region Image Importer ---")
+            import_regions() # Doesn't need the 'app' object
+            
+            # 8. Run the Logo Importer (NEW STEP)
+            print("\n--- Running Logo Importer ---")
+            import_logos(app) # Pass the app object
 
             # Optional: Verify final count
             total_countries = Country.query.count()
