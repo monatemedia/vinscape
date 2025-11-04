@@ -1,21 +1,15 @@
-# src/seed_countries.py
-
 import os
 import json
 import requests
-# REMOVED: import sqlite3
 from pathlib import Path
 from flask import current_app
-
 # ASSUMED IMPORTS: Import the SQLAlchemy db object and the Country model
-# This requires the Flask app context to be active when 'main()' is called.
 from app import db 
 from app.models.country import Country 
 
 # Configuration
 DATA_DIR = Path("public_data_sources")
 COUNTRIES_FILE = DATA_DIR / "countries.json"
-# REMOVED: DB_PATH - handled by Flask-SQLAlchemy configuration
 COUNTRIES_URL = "https://raw.githubusercontent.com/mledoze/countries/master/countries.json"
 
 # Helper functions (kept identical)
@@ -38,11 +32,17 @@ def get_calling_code(idd_obj):
     return root if root else None
 
 def map_region(region, subregion):
-    """Map region names to standardized values"""
+    """
+    Map region names to standardized values.
+    
+    FIXED: Added 'North America' to the subregion check list to correctly
+    classify the United States.
+    """
     region_mapping = {
         'Africa': 'Africa',
-        # Updated to be consistent with the logic in scrape_wmi_regions.py and new seeder
-        'Americas': 'North America' if subregion in ['Northern America', 'Central America', 'Caribbean'] else 'South America',
+        # --- FIX APPLIED HERE ---
+        # 'North America' subregion (used by US) is now correctly mapped.
+        'Americas': 'North America' if subregion in ['Northern America', 'Central America', 'Caribbean', 'North America'] else 'South America',
         'Asia': 'Asia',
         'Europe': 'Europe',
         'Oceania': 'Oceania',
@@ -76,46 +76,54 @@ def download_countries():
         print(f"❌ Error downloading data: {e}")
         raise
 
-# REMOVED: create_database function. Database setup is now handled by the Flask app.
-
 def seed_countries(countries_data):
     """Seed countries into database using SQLAlchemy models"""
     print(f"\n💾 Processing and inserting {len(countries_data)} countries...")
         
     inserted_count = 0
     skipped_count = 0
-    
+    updated_count = 0
+
     # Use a set for faster lookup of existing ISO alpha-2 codes
-    existing_isos = {c.iso_alpha2 for c in Country.query.with_entities(Country.iso_alpha2).all()}
+    # Fetch all existing countries to determine if we insert or skip/update
+    existing_countries = {c.iso_alpha2: c for c in Country.query.all()}
         
     try:
         for country_data in countries_data:
             iso_alpha2 = country_data.get('cca2')
-
             if not iso_alpha2:
                 print(f"⚠ Skipping country without ISO Alpha-2 code")
                 skipped_count += 1
                 continue
 
-            # Check if country already exists
-            if iso_alpha2 in existing_isos:
-                skipped_count += 1
-                continue
-
-            # Prepare country data
+            # Prepare common data used for both insert/update
             name_data = country_data.get('name', {})
             official_name = name_data.get('official', name_data.get('common'))
             common_name = name_data.get('common')
             region = map_region(country_data.get('region'), country_data.get('subregion'))
 
-            # Create and insert country object
+            # Check if country already exists
+            if iso_alpha2 in existing_countries:
+                country = existing_countries[iso_alpha2]
+                
+                # Special check for US: force region update if needed
+                if iso_alpha2 == 'US' and country.region != region:
+                    country.region = region
+                    db.session.add(country)
+                    print(f"  ⬆ Updated region for {common_name} to {region} (FIXED)")
+                    updated_count += 1
+                else:
+                    skipped_count += 1
+                continue
+
+            # If country does not exist, insert it
             country = Country(
                 iso_alpha2=iso_alpha2,
                 iso_alpha3=country_data.get('cca3'),
                 iso_numeric=country_data.get('ccn3'),
                 name=official_name,
                 common_name=common_name,
-                region=region,
+                region=region, # Uses the fixed region mapping
                 subregion=country_data.get('subregion'),
                 currency_code=get_first_value(country_data.get('currencies')),
                 calling_code=get_calling_code(country_data.get('idd', {})),
@@ -123,12 +131,11 @@ def seed_countries(countries_data):
                 flag_emoji=country_data.get('flag'),
             )
             db.session.add(country)
-
             print(f"  ✓ {common_name}")
             inserted_count += 1
-
+            
         # Add special "Unknown" country for unassigned/invalid VIN ranges
-        if 'XX' not in existing_isos:
+        if 'XX' not in existing_countries:
             unknown_country = Country(
                 iso_alpha2='XX', 
                 iso_alpha3='XXX', 
@@ -142,43 +149,36 @@ def seed_countries(countries_data):
             db.session.add(unknown_country)
             print(f"  ✓ Unknown (special catch-all country)")
             inserted_count += 1
-
+            
         db.session.commit()
-        
+                
         print("=" * 50)
-        print(f"✅ Successfully seeded {inserted_count} countries!")
-        print(f"⊘ Skipped {skipped_count} existing countries")
+        print(f"✅ Successfully seeded {inserted_count} new countries!")
+        print(f"⬆ Updated {updated_count} existing countries (US region fix).")
+        print(f"⊘ Skipped {skipped_count} existing/unspecified countries.")
         print("=" * 50)
-        
+                
         return inserted_count
-        
+            
     except Exception as e:
         db.session.rollback()
         raise e
 
-# REMOVED: verify_seeding function, as it's cleaner to handle DB stats elsewhere.
-
 def main():
     """Main execution function"""
     print("🚀 Starting countries data seeding process...\n")
-        
+            
     try:
         # Step 1: Download or load countries data
         countries_data = download_countries()
-        
-        # NOTE: Database creation and table setup (db.create_all()) 
-        # must happen before this point, likely in the main runner script.
-        
+                
         # Step 2: Seed countries
         seed_countries(countries_data)
-        
-        # REMOVED: verify_seeding(conn) and conn.close()
-        
+                
         print("\n🎉 All done! Countries seeded successfully.")
-            
+                
     except Exception as e:
         print(f"\n❌ Error: {e}")
-        # The main runner script should catch and handle final errors
         raise
 
 if __name__ == "__main__":
