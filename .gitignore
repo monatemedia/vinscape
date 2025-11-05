@@ -39,4 +39,7 @@ desktop.ini
 /public/img/
 
 # Node
-/node_modulesWhatsApp.md
+/node_modules
+
+# Unwanted files
+WhatsApp.md
