@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+<!-- Set the page title -->
+{% block title %}Factory Logo Review{% endblock %}
+
+<!-- Add page-specific styles -->
+{% block head %}
     <title>VIN Decoder & Generator Pro</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -307,8 +309,11 @@
             opacity: 0.6;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+
+
+<!-- Add page-specific content -->
+{% block content %}
     <div class="header">
         <h1>🚗 VIN Decoder & Generator Pro</h1>
         <p>Powered by comprehensive database with 2,300+ manufacturers and 250+ countries</p>
@@ -371,7 +376,10 @@
             <div id="generateResult" class="result"></div>
         </div>
     </div>
-    
+{% endblock %}
+
+<!-- Add page-specific scripts -->
+{% block scripts %}
     <script>
         function getRegionImage(region) {
             if (!region || region === 'Unknown') return null;
@@ -614,5 +622,4 @@
         // Auto-generate on load
         window.addEventListener('load', generateVIN);
     </script>
-</body>
-</html>
+{% endblock %}

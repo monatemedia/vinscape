@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be set by the page that extends this template -->
+    <title>{% block title %}VIN Database{% endblock %}</title>
+    
+    <!-- Shared Styles (Navbar, Background) -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            /* Add padding to the top to make space for the fixed navbar */
+            padding-top: 80px; 
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 0 40px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2d3748;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover {
+            background: #f0f4f8;
+        }
+        /* This 'active' class will be set by Flask */
+        .nav-links a.active {
+            background: #667eea;
+            color: white;
+        }
+        .content-container {
+            padding: 20px;
+        }
+    </style>
+    
+    <!-- This block allows individual pages to add their own styles -->
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Shared Navbar -->
+    <nav class="navbar">
+        <a href="{{ url_for('main.index') }}" class="nav-logo">🚗 VINscape</a>
+        <div class="nav-links">
+            <!-- 
+              'active_page' is a variable we will pass from our Flask route 
+              to highlight the correct link.
+            -->
+            <a href="{{ url_for('main.index') }}" 
+               class="{{ 'active' if active_page == 'decoder' else '' }}">VIN Decoder</a>
+            <a href="{{ url_for('main.factories') }}" 
+               class="{{ 'active' if active_page == 'factories' else '' }}">Factory Review</a>
+        </div>
+    </nav>
+    
+    <!-- Main content block -->
+    <main class="content-container">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- This block allows individual pages to add their own scripts -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>
