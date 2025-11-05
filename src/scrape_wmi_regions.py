@@ -81,7 +81,6 @@ def normalize_country_name(country):
         'UAE': 'United Arab Emirates',
         'Dom. Rep.': 'Dominican Republic',
         'Bosnia & Herzogovina': 'Bosnia and Herzegovina',
-        'Bosnia & Herzegovina': 'Bosnia and Herzegovina',
     }
     
     # Remove formatting like (former East Germany), <small> tags, etc.

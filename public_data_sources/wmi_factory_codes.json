@@ -45,7 +45,7 @@
   },
   {
     "WMI": "AC5",
-    "Manufacturer": "HyundaiAutomotive South Africa"
+    "Manufacturer": "Hyundai Automotive South Africa"
   },
   {
     "WMI": "AC9/BM1",
@@ -205,7 +205,7 @@
   },
   {
     "WMI": "HL4",
-    "Manufacturer": "Zhejiang Morini Vehicle Co., Ltd.(Moto Morini subsidiary of Taizhou Zhongneng Motorcycle Co., Ltd.)"
+    "Manufacturer": "Zhejiang Morini Vehicle Co., Ltd. (Moto Morini subsidiary of Taizhou Zhongneng Motorcycle Co., Ltd.)"
   },
   {
     "WMI": "HLX",
@@ -253,7 +253,7 @@
   },
   {
     "WMI": "JAL",
-    "Manufacturer": "Isuzu commercial trucks &Chevrolet commercial trucks made by Isuzu 2016+ &Hino S-series truck made by Isuzu (Incomplete Vehicle - medium duty)"
+    "Manufacturer": "Isuzu commercial trucks & Chevrolet commercial trucks made by Isuzu 2016+ & Hino S-series truck made by Isuzu (Incomplete Vehicle - medium duty)"
   },
   {
     "WMI": "JAM",
@@ -321,15 +321,15 @@
   },
   {
     "WMI": "JF1",
-    "Manufacturer": "(Subaru) car"
+    "Manufacturer": "( Subaru ) car"
   },
   {
     "WMI": "JF2",
-    "Manufacturer": "(Subaru) SUV"
+    "Manufacturer": "( Subaru ) SUV"
   },
   {
     "WMI": "JF3",
-    "Manufacturer": "(Subaru) truck"
+    "Manufacturer": "( Subaru ) truck"
   },
   {
     "WMI": "JF4",
@@ -381,23 +381,23 @@
   },
   {
     "WMI": "JHL",
-    "Manufacturer": "HondaMPV/SUV"
+    "Manufacturer": "Honda MPV/SUV"
   },
   {
     "WMI": "JHM",
-    "Manufacturer": "Hondacar"
+    "Manufacturer": "Honda car"
   },
   {
     "WMI": "JH1",
-    "Manufacturer": "Hondatruck"
+    "Manufacturer": "Honda truck"
   },
   {
     "WMI": "JH2",
-    "Manufacturer": "Hondamotorcycle/ATV"
+    "Manufacturer": "Honda motorcycle/ATV"
   },
   {
     "WMI": "JH3",
-    "Manufacturer": "HondaATV"
+    "Manufacturer": "Honda ATV"
   },
   {
     "WMI": "JH4",
@@ -653,7 +653,7 @@
   },
   {
     "WMI": "JT1",
-    "Manufacturer": "Toyotavan"
+    "Manufacturer": "Toyota van"
   },
   {
     "WMI": "JT2",
@@ -789,11 +789,11 @@
   },
   {
     "WMI": "KL",
-    "Manufacturer": "DaewooGeneral MotorsSouth Korea"
+    "Manufacturer": "Daewoo General Motors South Korea"
   },
   {
     "WMI": "KLA",
-    "Manufacturer": "Daewoo/GM Daewoo/GM Korea (Chevrolet/Alpheon)from Bupyeong & Kunsan plants"
+    "Manufacturer": "Daewoo/GM Daewoo/GM Korea (Chevrolet/Alpheon) from Bupyeong & Kunsan plants"
   },
   {
     "WMI": "KLP",
@@ -973,7 +973,7 @@
   },
   {
     "WMI": "LAL",
-    "Manufacturer": "SundiroHondaMotorcycle"
+    "Manufacturer": "Sundiro Honda Motorcycle"
   },
   {
     "WMI": "LAN",
@@ -1041,7 +1041,7 @@
   },
   {
     "WMI": "LBE",
-    "Manufacturer": "BeijingHyundai(Hyundai, Shouwang)"
+    "Manufacturer": "Beijing Hyundai (Hyundai, Shouwang)"
   },
   {
     "WMI": "LBM",
@@ -1481,7 +1481,7 @@
   },
   {
     "WMI": "LMG",
-    "Manufacturer": "GAC Motor, Trumpchi,Dodge Attitude made by GAC"
+    "Manufacturer": "GAC Motor, Trumpchi, Dodge Attitude made by GAC"
   },
   {
     "WMI": "LMH",
@@ -1501,7 +1501,7 @@
   },
   {
     "WMI": "LMW",
-    "Manufacturer": "GAC Group,Dodge Journey made by GAC"
+    "Manufacturer": "GAC Group, Dodge Journey made by GAC"
   },
   {
     "WMI": "LMX",
@@ -1669,7 +1669,7 @@
   },
   {
     "WMI": "LTV",
-    "Manufacturer": "FAWToyota(Tianjin)"
+    "Manufacturer": "FAW Toyota (Tianjin)"
   },
   {
     "WMI": "LTW",
@@ -1681,7 +1681,7 @@
   },
   {
     "WMI": "LUC",
-    "Manufacturer": "HondaAutomobile (China)"
+    "Manufacturer": "Honda Automobile (China)"
   },
   {
     "WMI": "LUD",
@@ -1745,7 +1745,7 @@
   },
   {
     "WMI": "LVS",
-    "Manufacturer": "ChanganFord(Ford, Lincoln) & Changan Ford Mazda & Volvo S40 and S80L made by Changan Ford Mazda"
+    "Manufacturer": "Changan Ford (Ford, Lincoln) & Changan Ford Mazda & Volvo S40 and S80L made by Changan Ford Mazda"
   },
   {
     "WMI": "LVT",
@@ -2085,11 +2085,11 @@
   },
   {
     "WMI": "MAJ",
-    "Manufacturer": "FordIndia"
+    "Manufacturer": "Ford India"
   },
   {
     "WMI": "MAK",
-    "Manufacturer": "HondaCars India"
+    "Manufacturer": "Honda Cars India"
   },
   {
     "WMI": "MAL",
@@ -2133,7 +2133,7 @@
   },
   {
     "WMI": "MBJ",
-    "Manufacturer": "ToyotaKirloskar Motor Pvt. Ltd."
+    "Manufacturer": "Toyota Kirloskar Motor Pvt. Ltd."
   },
   {
     "WMI": "MBK",
@@ -2321,7 +2321,7 @@
   },
   {
     "WMI": "MHF",
-    "Manufacturer": "PTToyotaMotor Manufacturing Indonesia"
+    "Manufacturer": "PT Toyota Motor Manufacturing Indonesia"
   },
   {
     "WMI": "MHK",
@@ -2333,7 +2333,7 @@
   },
   {
     "WMI": "MHR",
-    "Manufacturer": "HondaIndonesia (PT Honda Prospect Motor) (car)"
+    "Manufacturer": "Honda Indonesia (PT Honda Prospect Motor) (car)"
   },
   {
     "WMI": "MHY",
@@ -2385,7 +2385,7 @@
   },
   {
     "WMI": "MLH",
-    "Manufacturer": "ThaiHondaManufacturing Co., Ltd. (motorcycle)"
+    "Manufacturer": "Thai Honda Manufacturing Co., Ltd. (motorcycle)"
   },
   {
     "WMI": "MLW",
@@ -2401,7 +2401,7 @@
   },
   {
     "WMI": "ML3",
-    "Manufacturer": "Mitsubishi Motors, Dodge Colt 100 [Canada],Dodge Attitude[Mexico] made by Mitsubishi (Thailand)"
+    "Manufacturer": "Mitsubishi Motors, Dodge Colt 100 [Canada], Dodge Attitude [Mexico] made by Mitsubishi (Thailand)"
   },
   {
     "WMI": "ML5",
@@ -2461,15 +2461,15 @@
   },
   {
     "WMI": "MNA",
-    "Manufacturer": "FordThailand (Ford-Mazda AutoAlliance Thailand plant) for Australia/New Zealand export"
+    "Manufacturer": "Ford Thailand (Ford-Mazda AutoAlliance Thailand plant) for Australia/New Zealand export"
   },
   {
     "WMI": "MNB",
-    "Manufacturer": "FordThailand (Ford-Mazda AutoAlliance Thailand plant) for other right-hand drive markets"
+    "Manufacturer": "Ford Thailand (Ford-Mazda AutoAlliance Thailand plant) for other right-hand drive markets"
   },
   {
     "WMI": "MNC",
-    "Manufacturer": "FordThailand (Ford-Mazda AutoAlliance Thailand plant) for left-hand drive markets"
+    "Manufacturer": "Ford Thailand (Ford-Mazda AutoAlliance Thailand plant) for left-hand drive markets"
   },
   {
     "WMI": "MNK",
@@ -2493,7 +2493,7 @@
   },
   {
     "WMI": "MPB",
-    "Manufacturer": "FordThailand (Ford Thailand Manufacturing plant)"
+    "Manufacturer": "Ford Thailand (Ford Thailand Manufacturing plant)"
   },
   {
     "WMI": "MP1",
@@ -2513,7 +2513,7 @@
   },
   {
     "WMI": "MRH",
-    "Manufacturer": "HondaThailand (car)"
+    "Manufacturer": "Honda Thailand (car)"
   },
   {
     "WMI": "MRT",
@@ -2521,27 +2521,27 @@
   },
   {
     "WMI": "MR0",
-    "Manufacturer": "ToyotaThailand (pickups & Fortuner SUV)"
+    "Manufacturer": "Toyota Thailand (pickups & Fortuner SUV)"
   },
   {
     "WMI": "MR1",
-    "Manufacturer": "ToyotaThailand"
+    "Manufacturer": "Toyota Thailand"
   },
   {
     "WMI": "MR2",
-    "Manufacturer": "ToyotaThailand (Gateway plant) (passenger cars & CUVs)"
+    "Manufacturer": "Toyota Thailand (Gateway plant) (passenger cars & CUVs)"
   },
   {
     "WMI": "MR3",
-    "Manufacturer": "ToyotaThailand (Hilux Champ chassis cab)"
+    "Manufacturer": "Toyota Thailand (Hilux Champ chassis cab)"
   },
   {
     "WMI": "MS0",
-    "Manufacturer": "Super Seven Stars MotorsMyanmar"
+    "Manufacturer": "Super Seven Stars Motors Myanmar"
   },
   {
     "WMI": "MS1",
-    "Manufacturer": "Super Seven Stars AutomotiveMyanmar"
+    "Manufacturer": "Super Seven Stars Automotive Myanmar"
   },
   {
     "WMI": "MS3",
@@ -2625,11 +2625,11 @@
   },
   {
     "WMI": "NLH",
-    "Manufacturer": "HyundaiAssan Otomotiv car/SUV"
+    "Manufacturer": "Hyundai Assan Otomotiv car/SUV"
   },
   {
     "WMI": "NLJ",
-    "Manufacturer": "HyundaiAssan Otomotiv van"
+    "Manufacturer": "Hyundai Assan Otomotiv van"
   },
   {
     "WMI": "NLN",
@@ -2677,7 +2677,7 @@
   },
   {
     "WMI": "NMT",
-    "Manufacturer": "ToyotaMotor Manufacturing Turkey"
+    "Manufacturer": "Toyota Motor Manufacturing Turkey"
   },
   {
     "WMI": "NM0",
@@ -3417,7 +3417,7 @@
   },
   {
     "WMI": "SB1",
-    "Manufacturer": "ToyotaMotor Manufacturing UK"
+    "Manufacturer": "Toyota Motor Manufacturing UK"
   },
   {
     "WMI": "SCA",
@@ -3529,7 +3529,7 @@
   },
   {
     "WMI": "SFA",
-    "Manufacturer": "FordUK"
+    "Manufacturer": "Ford UK"
   },
   {
     "WMI": "SFD",
@@ -3577,11 +3577,11 @@
   },
   {
     "WMI": "SHH",
-    "Manufacturer": "HondaUK passenger car"
+    "Manufacturer": "Honda UK passenger car"
   },
   {
     "WMI": "SHS",
-    "Manufacturer": "HondaUK SUV"
+    "Manufacturer": "Honda UK SUV"
   },
   {
     "WMI": "SH7",
@@ -4009,7 +4009,7 @@
   },
   {
     "WMI": "TMA",
-    "Manufacturer": "HyundaiMotor Manufacturing Czech"
+    "Manufacturer": "Hyundai Motor Manufacturing Czech"
   },
   {
     "WMI": "TMB",
@@ -4017,7 +4017,7 @@
   },
   {
     "WMI": "TMC",
-    "Manufacturer": "HyundaiMotor Manufacturing Czech (SUV)"
+    "Manufacturer": "Hyundai Motor Manufacturing Czech (SUV)"
   },
   {
     "WMI": "TMK",
@@ -4117,7 +4117,7 @@
   },
   {
     "WMI": "TSM",
-    "Manufacturer": "Suzuki Hungary (Magyar Suzuki),Fiat Sedici made by Suzuki, Subaru Justy G3X made by Suzuki, Suzuki Swace made by Toyota UK (TMUK)"
+    "Manufacturer": "Suzuki Hungary (Magyar Suzuki), Fiat Sedici made by Suzuki, Subaru Justy G3X made by Suzuki, Suzuki Swace made by Toyota UK (TMUK)"
   },
   {
     "WMI": "TSY",
@@ -4169,7 +4169,7 @@
   },
   {
     "WMI": "TW2",
-    "Manufacturer": "FordLusitana (Portugal)"
+    "Manufacturer": "Ford Lusitana (Portugal)"
   },
   {
     "WMI": "TW4",
@@ -4297,7 +4297,7 @@
   },
   {
     "WMI": "UN1",
-    "Manufacturer": "FordIreland"
+    "Manufacturer": "Ford Ireland"
   },
   {
     "WMI": "UN9/089",
@@ -4689,7 +4689,7 @@
   },
   {
     "WMI": "VNK",
-    "Manufacturer": "ToyotaMotor Manufacturing France & '11-'13 Daihatsu Charade (XP90) made by TMMF"
+    "Manufacturer": "Toyota Motor Manufacturing France & '11-'13 Daihatsu Charade (XP90) made by TMMF"
   },
   {
     "WMI": "VNV",
@@ -4801,7 +4801,7 @@
   },
   {
     "WMI": "VS6",
-    "Manufacturer": "FordSpain"
+    "Manufacturer": "Ford Spain"
   },
   {
     "WMI": "VS7",
@@ -4917,7 +4917,7 @@
   },
   {
     "WMI": "VV9/",
-    "Manufacturer": "TAUROSport Auto Spain"
+    "Manufacturer": "TAURO Sport Auto Spain"
   },
   {
     "WMI": "VV9/010",
@@ -4961,7 +4961,7 @@
   },
   {
     "WMI": "VX1",
-    "Manufacturer": "Zastava Automobiles/Yugo(Yugoslavia/Serbia)"
+    "Manufacturer": "Zastava Automobiles / Yugo (Yugoslavia/Serbia)"
   },
   {
     "WMI": "V1Y",
@@ -5105,7 +5105,7 @@
   },
   {
     "WMI": "WDB",
-    "Manufacturer": "Mercedes-Benz& Maybach"
+    "Manufacturer": "Mercedes-Benz & Maybach"
   },
   {
     "WMI": "WDC",
@@ -5113,11 +5113,11 @@
   },
   {
     "WMI": "WDD",
-    "Manufacturer": "Mercedes-Benzcar"
+    "Manufacturer": "Mercedes-Benz car"
   },
   {
     "WMI": "WDF",
-    "Manufacturer": "Mercedes-Benzvan/pickup (French & Spanish built models – Citan & Vito & X-Class)"
+    "Manufacturer": "Mercedes-Benz van/pickup (French & Spanish built models – Citan & Vito & X-Class)"
   },
   {
     "WMI": "WDP",
@@ -5213,7 +5213,7 @@
   },
   {
     "WMI": "WF0",
-    "Manufacturer": "FordGermany"
+    "Manufacturer": "Ford Germany"
   },
   {
     "WMI": "WF1",
@@ -5821,7 +5821,7 @@
   },
   {
     "WMI": "XLC",
-    "Manufacturer": "FordNetherlands"
+    "Manufacturer": "Ford Netherlands"
   },
   {
     "WMI": "XLD",
@@ -6229,7 +6229,7 @@
   },
   {
     "WMI": "X7M",
-    "Manufacturer": "Hyundai& Vortex (rebadged Chery) made by TagAZ (Russia)"
+    "Manufacturer": "Hyundai & Vortex (rebadged Chery) made by TagAZ (Russia)"
   },
   {
     "WMI": "X89/AD4",
@@ -6549,23 +6549,23 @@
   },
   {
     "WMI": "YV1",
-    "Manufacturer": "Volvocars"
+    "Manufacturer": "Volvo cars"
   },
   {
     "WMI": "YV2",
-    "Manufacturer": "Volvotrucks"
+    "Manufacturer": "Volvo trucks"
   },
   {
     "WMI": "YV3",
-    "Manufacturer": "Volvobuses and bus chassis"
+    "Manufacturer": "Volvo buses and bus chassis"
   },
   {
     "WMI": "YV4",
-    "Manufacturer": "VolvoSUV"
+    "Manufacturer": "Volvo SUV"
   },
   {
     "WMI": "YV5",
-    "Manufacturer": "Volvo Trucksincomplete vehicle"
+    "Manufacturer": "Volvo Trucks incomplete vehicle"
   },
   {
     "WMI": "YYB",
@@ -6645,7 +6645,7 @@
   },
   {
     "WMI": "Y4F",
-    "Manufacturer": "FordBelarus"
+    "Manufacturer": "Ford Belarus"
   },
   {
     "WMI": "Y4K",
@@ -6857,7 +6857,7 @@
   },
   {
     "WMI": "ZA9/A12",
-    "Manufacturer": "Lamborghinithrough mid-2003 (including LM002)"
+    "Manufacturer": "Lamborghini through mid-2003 (including LM002)"
   },
   {
     "WMI": "ZA9/A17",
@@ -7049,7 +7049,7 @@
   },
   {
     "WMI": "ZDF",
-    "Manufacturer": "FerrariDino"
+    "Manufacturer": "Ferrari Dino"
   },
   {
     "WMI": "ZDJ",
@@ -7161,7 +7161,7 @@
   },
   {
     "WMI": "ZHW",
-    "Manufacturer": "Lamborghini(Mid-2003 – )"
+    "Manufacturer": "Lamborghini (Mid-2003 – )"
   },
   {
     "WMI": "ZHZ",
@@ -7225,7 +7225,7 @@
   },
   {
     "WMI": "ZPB",
-    "Manufacturer": "LamborghiniSUV"
+    "Manufacturer": "Lamborghini SUV"
   },
   {
     "WMI": "ZPY",
@@ -7249,7 +7249,7 @@
   },
   {
     "WMI": "ZSG",
-    "Manufacturer": "FerrariSUV"
+    "Manufacturer": "Ferrari SUV"
   },
   {
     "WMI": "ZX1",
@@ -7565,27 +7565,27 @@
   },
   {
     "WMI": "1FA",
-    "Manufacturer": "Fordcar"
+    "Manufacturer": "Ford car"
   },
   {
     "WMI": "1FB",
-    "Manufacturer": "Ford\"bus\" (van with more than 3 rows of seats)"
+    "Manufacturer": "Ford \"bus\" (van with more than 3 rows of seats)"
   },
   {
     "WMI": "1FC",
-    "Manufacturer": "Fordstripped chassis made by Ford"
+    "Manufacturer": "Ford stripped chassis made by Ford"
   },
   {
     "WMI": "1FD",
-    "Manufacturer": "Fordincomplete vehicle"
+    "Manufacturer": "Ford incomplete vehicle"
   },
   {
     "WMI": "1FM",
-    "Manufacturer": "FordMPV/SUV"
+    "Manufacturer": "Ford MPV/SUV"
   },
   {
     "WMI": "1FT",
-    "Manufacturer": "Fordtruck"
+    "Manufacturer": "Ford truck"
   },
   {
     "WMI": "1FU",
@@ -7629,7 +7629,7 @@
   },
   {
     "WMI": "1G",
-    "Manufacturer": "General MotorsUSA"
+    "Manufacturer": "General Motors USA"
   },
   {
     "WMI": "1G0",
@@ -7645,19 +7645,19 @@
   },
   {
     "WMI": "1G1",
-    "Manufacturer": "Chevroletcar"
+    "Manufacturer": "Chevrolet car"
   },
   {
     "WMI": "1G2",
-    "Manufacturer": "Pontiaccar"
+    "Manufacturer": "Pontiac car"
   },
   {
     "WMI": "1G3",
-    "Manufacturer": "Oldsmobilecar"
+    "Manufacturer": "Oldsmobile car"
   },
   {
     "WMI": "1G4",
-    "Manufacturer": "Buickcar"
+    "Manufacturer": "Buick car"
   },
   {
     "WMI": "1G5",
@@ -7665,7 +7665,7 @@
   },
   {
     "WMI": "1G6",
-    "Manufacturer": "Cadillaccar"
+    "Manufacturer": "Cadillac car"
   },
   {
     "WMI": "1G7",
@@ -7677,7 +7677,7 @@
   },
   {
     "WMI": "1G8",
-    "Manufacturer": "Saturncar 1991–2010"
+    "Manufacturer": "Saturn car 1991–2010"
   },
   {
     "WMI": "1G9/495",
@@ -7693,7 +7693,7 @@
   },
   {
     "WMI": "1GC",
-    "Manufacturer": "Chevrolettruck"
+    "Manufacturer": "Chevrolet truck"
   },
   {
     "WMI": "1GD",
@@ -7733,11 +7733,11 @@
   },
   {
     "WMI": "1GM",
-    "Manufacturer": "PontiacMPV"
+    "Manufacturer": "Pontiac MPV"
   },
   {
     "WMI": "1GN",
-    "Manufacturer": "ChevroletMPV/SUV 1987-"
+    "Manufacturer": "Chevrolet MPV/SUV 1987-"
   },
   {
     "WMI": "1GR",
@@ -7745,11 +7745,11 @@
   },
   {
     "WMI": "1GT",
-    "Manufacturer": "GMCTruck"
+    "Manufacturer": "GMC Truck"
   },
   {
     "WMI": "1GY",
-    "Manufacturer": "CadillacSUV"
+    "Manufacturer": "Cadillac SUV"
   },
   {
     "WMI": "1HA",
@@ -7765,7 +7765,7 @@
   },
   {
     "WMI": "1HG",
-    "Manufacturer": "Hondacar made by Honda of America Mfg. in Ohio"
+    "Manufacturer": "Honda car made by Honda of America Mfg. in Ohio"
   },
   {
     "WMI": "1HS",
@@ -7825,7 +7825,7 @@
   },
   {
     "WMI": "1LN",
-    "Manufacturer": "Lincolncar"
+    "Manufacturer": "Lincoln car"
   },
   {
     "WMI": "1LV",
@@ -7853,7 +7853,7 @@
   },
   {
     "WMI": "1ME",
-    "Manufacturer": "Mercurycar"
+    "Manufacturer": "Mercury car"
   },
   {
     "WMI": "1MR",
@@ -8401,7 +8401,7 @@
   },
   {
     "WMI": "2FA",
-    "Manufacturer": "Fordcar"
+    "Manufacturer": "Ford car"
   },
   {
     "WMI": "2FH",
@@ -8409,11 +8409,11 @@
   },
   {
     "WMI": "2FM",
-    "Manufacturer": "FordMPV/SUV"
+    "Manufacturer": "Ford MPV/SUV"
   },
   {
     "WMI": "2FT",
-    "Manufacturer": "Fordtruck"
+    "Manufacturer": "Ford truck"
   },
   {
     "WMI": "2FU",
@@ -8437,7 +8437,7 @@
   },
   {
     "WMI": "2Gx",
-    "Manufacturer": "General MotorsCanada"
+    "Manufacturer": "General Motors Canada"
   },
   {
     "WMI": "2G0",
@@ -8445,19 +8445,19 @@
   },
   {
     "WMI": "2G1",
-    "Manufacturer": "Chevroletcar"
+    "Manufacturer": "Chevrolet car"
   },
   {
     "WMI": "2G2",
-    "Manufacturer": "Pontiaccar"
+    "Manufacturer": "Pontiac car"
   },
   {
     "WMI": "2G3",
-    "Manufacturer": "Oldsmobilecar"
+    "Manufacturer": "Oldsmobile car"
   },
   {
     "WMI": "2G4",
-    "Manufacturer": "Buickcar"
+    "Manufacturer": "Buick car"
   },
   {
     "WMI": "2G5",
@@ -8469,7 +8469,7 @@
   },
   {
     "WMI": "2G6",
-    "Manufacturer": "Cadillaccar"
+    "Manufacturer": "Cadillac car"
   },
   {
     "WMI": "2G7",
@@ -8521,7 +8521,7 @@
   },
   {
     "WMI": "2HG",
-    "Manufacturer": "Hondacar made by Honda of Canada Manufacturing"
+    "Manufacturer": "Honda car made by Honda of Canada Manufacturing"
   },
   {
     "WMI": "2HH",
@@ -8529,11 +8529,11 @@
   },
   {
     "WMI": "2HJ",
-    "Manufacturer": "Hondatruck made by Honda of Canada Manufacturing"
+    "Manufacturer": "Honda truck made by Honda of Canada Manufacturing"
   },
   {
     "WMI": "2HK",
-    "Manufacturer": "HondaMPV/SUV made by Honda of Canada Manufacturing"
+    "Manufacturer": "Honda MPV/SUV made by Honda of Canada Manufacturing"
   },
   {
     "WMI": "2HM",
@@ -8585,7 +8585,7 @@
   },
   {
     "WMI": "2ME",
-    "Manufacturer": "Mercurycar"
+    "Manufacturer": "Mercury car"
   },
   {
     "WMI": "2MG",
@@ -8593,11 +8593,11 @@
   },
   {
     "WMI": "2MH",
-    "Manufacturer": "Mercuryincomplete vehicle"
+    "Manufacturer": "Mercury incomplete vehicle"
   },
   {
     "WMI": "2MR",
-    "Manufacturer": "MercuryMPV"
+    "Manufacturer": "Mercury MPV"
   },
   {
     "WMI": "2M9/044",
@@ -8653,7 +8653,7 @@
   },
   {
     "WMI": "2T1",
-    "Manufacturer": "Toyotacar made by TMMC"
+    "Manufacturer": "Toyota car made by TMMC"
   },
   {
     "WMI": "2T2",
@@ -8661,7 +8661,7 @@
   },
   {
     "WMI": "2T3",
-    "Manufacturer": "ToyotaSUV made by TMMC"
+    "Manufacturer": "Toyota SUV made by TMMC"
   },
   {
     "WMI": "2T9/206",
@@ -8833,7 +8833,7 @@
   },
   {
     "WMI": "3FA",
-    "Manufacturer": "Fordcar"
+    "Manufacturer": "Ford car"
   },
   {
     "WMI": "3FC",
@@ -8841,11 +8841,11 @@
   },
   {
     "WMI": "3FE",
-    "Manufacturer": "FordMexico"
+    "Manufacturer": "Ford Mexico"
   },
   {
     "WMI": "3FM",
-    "Manufacturer": "FordMPV/SUV"
+    "Manufacturer": "Ford MPV/SUV"
   },
   {
     "WMI": "3FN",
@@ -8857,7 +8857,7 @@
   },
   {
     "WMI": "3FT",
-    "Manufacturer": "Fordtruck"
+    "Manufacturer": "Ford truck"
   },
   {
     "WMI": "3F6",
@@ -8865,7 +8865,7 @@
   },
   {
     "WMI": "3G",
-    "Manufacturer": "General MotorsMexico"
+    "Manufacturer": "General Motors Mexico"
   },
   {
     "WMI": "3G0",
@@ -8877,23 +8877,23 @@
   },
   {
     "WMI": "3G1",
-    "Manufacturer": "Chevroletcar"
+    "Manufacturer": "Chevrolet car"
   },
   {
     "WMI": "3G2",
-    "Manufacturer": "Pontiaccar"
+    "Manufacturer": "Pontiac car"
   },
   {
     "WMI": "3G4",
-    "Manufacturer": "Buickcar"
+    "Manufacturer": "Buick car"
   },
   {
     "WMI": "3G5",
-    "Manufacturer": "BuickSUV"
+    "Manufacturer": "Buick SUV"
   },
   {
     "WMI": "3G7",
-    "Manufacturer": "PontiacSUV"
+    "Manufacturer": "Pontiac SUV"
   },
   {
     "WMI": "3GC",
@@ -8949,7 +8949,7 @@
   },
   {
     "WMI": "3HG",
-    "Manufacturer": "Hondacar made by Honda de Mexico"
+    "Manufacturer": "Honda car made by Honda de Mexico"
   },
   {
     "WMI": "3HS",
@@ -9161,7 +9161,7 @@
   },
   {
     "WMI": "4JG",
-    "Manufacturer": "Mercedes-BenzSUV"
+    "Manufacturer": "Mercedes-Benz SUV"
   },
   {
     "WMI": "4J8",
@@ -9189,7 +9189,7 @@
   },
   {
     "WMI": "4M2",
-    "Manufacturer": "MercuryMPV/SUV"
+    "Manufacturer": "Mercury MPV/SUV"
   },
   {
     "WMI": "4MB",
@@ -9237,11 +9237,11 @@
   },
   {
     "WMI": "4S3",
-    "Manufacturer": "Subarucar"
+    "Manufacturer": "Subaru car"
   },
   {
     "WMI": "4S4",
-    "Manufacturer": "SubaruSUV/MPV"
+    "Manufacturer": "Subaru SUV/MPV"
   },
   {
     "WMI": "4S6",
@@ -9293,19 +9293,19 @@
   },
   {
     "WMI": "4TA",
-    "Manufacturer": "Toyotatruck made by NUMMI"
+    "Manufacturer": "Toyota truck made by NUMMI"
   },
   {
     "WMI": "4T1",
-    "Manufacturer": "Toyotacar made by Toyota Motor Manufacturing Kentucky"
+    "Manufacturer": "Toyota car made by Toyota Motor Manufacturing Kentucky"
   },
   {
     "WMI": "4T3",
-    "Manufacturer": "ToyotaMPV/SUV made by Toyota Motor Manufacturing Kentucky"
+    "Manufacturer": "Toyota MPV/SUV made by Toyota Motor Manufacturing Kentucky"
   },
   {
     "WMI": "4T4",
-    "Manufacturer": "Toyotacar made by Subaru of Indiana Automotive"
+    "Manufacturer": "Toyota car made by Subaru of Indiana Automotive"
   },
   {
     "WMI": "4T9/208",
@@ -9325,7 +9325,7 @@
   },
   {
     "WMI": "4UZ",
-    "Manufacturer": "Freightliner Custom Chassis Corporation &gas-powered Mitsubishi Fuso trucks assembled by Freightliner Custom Chassis &Thomas Built Buses FS-65 & Saf-T-Liner C2"
+    "Manufacturer": "Freightliner Custom Chassis Corporation & gas-powered Mitsubishi Fuso trucks assembled by Freightliner Custom Chassis & Thomas Built Buses FS-65 & Saf-T-Liner C2"
   },
   {
     "WMI": "4V0",
@@ -9341,7 +9341,7 @@
   },
   {
     "WMI": "4V3",
-    "Manufacturer": "Volvotruck"
+    "Manufacturer": "Volvo truck"
   },
   {
     "WMI": "4V4",
@@ -9353,7 +9353,7 @@
   },
   {
     "WMI": "4V6",
-    "Manufacturer": "Volvotruck"
+    "Manufacturer": "Volvo truck"
   },
   {
     "WMI": "4VA",
@@ -9585,7 +9585,7 @@
   },
   {
     "WMI": "5L1",
-    "Manufacturer": "LincolnSUV - Limousine (2004–2009)"
+    "Manufacturer": "Lincoln SUV - Limousine (2004–2009)"
   },
   {
     "WMI": "5L5",
@@ -9597,11 +9597,11 @@
   },
   {
     "WMI": "5LM",
-    "Manufacturer": "LincolnSUV"
+    "Manufacturer": "Lincoln SUV"
   },
   {
     "WMI": "5LT",
-    "Manufacturer": "Lincolntruck"
+    "Manufacturer": "Lincoln truck"
   },
   {
     "WMI": "5MZ",
@@ -9657,7 +9657,7 @@
   },
   {
     "WMI": "5TB",
-    "Manufacturer": "Toyotatruck made by TMMI"
+    "Manufacturer": "Toyota truck made by TMMI"
   },
   {
     "WMI": "5TD",
@@ -9877,23 +9877,23 @@
   },
   {
     "WMI": "6FP",
-    "Manufacturer": "FordAustralia"
+    "Manufacturer": "Ford Australia"
   },
   {
     "WMI": "6G1",
-    "Manufacturer": "General Motors-Holden (post Nov 2002) & Chevrolet & Vauxhall Monaro & VXR8"
+    "Manufacturer": "General Motors -Holden (post Nov 2002) & Chevrolet & Vauxhall Monaro & VXR8"
   },
   {
     "WMI": "6G2",
-    "Manufacturer": "PontiacAustralia (GTO & G8)"
+    "Manufacturer": "Pontiac Australia (GTO & G8)"
   },
   {
     "WMI": "6G3",
-    "Manufacturer": "General MotorsChevrolet 2014-2017"
+    "Manufacturer": "General Motors Chevrolet 2014-2017"
   },
   {
     "WMI": "6H8",
-    "Manufacturer": "General Motors-Holden (pre Nov 2002)"
+    "Manufacturer": "General Motors -Holden (pre Nov 2002)"
   },
   {
     "WMI": "6KT",
@@ -9909,7 +9909,7 @@
   },
   {
     "WMI": "6T1",
-    "Manufacturer": "ToyotaMotor Corporation Australia"
+    "Manufacturer": "Toyota Motor Corporation Australia"
   },
   {
     "WMI": "6U9",
@@ -10045,7 +10045,7 @@
   },
   {
     "WMI": "7SV",
-    "Manufacturer": "ToyotaSUV made by TMMTX"
+    "Manufacturer": "Toyota SUV made by TMMTX"
   },
   {
     "WMI": "7SX",
@@ -10101,15 +10101,15 @@
   },
   {
     "WMI": "8AF",
-    "Manufacturer": "FordArgentina"
+    "Manufacturer": "Ford Argentina"
   },
   {
     "WMI": "8AG",
-    "Manufacturer": "ChevroletArgentina"
+    "Manufacturer": "Chevrolet Argentina"
   },
   {
     "WMI": "8AJ",
-    "Manufacturer": "ToyotaArgentina"
+    "Manufacturer": "Toyota Argentina"
   },
   {
     "WMI": "8AK",
@@ -10181,7 +10181,7 @@
   },
   {
     "WMI": "8GG",
-    "Manufacturer": "ChevroletChile"
+    "Manufacturer": "Chevrolet Chile"
   },
   {
     "WMI": "8LD",
@@ -10225,11 +10225,11 @@
   },
   {
     "WMI": "9BF",
-    "Manufacturer": "FordBrazil"
+    "Manufacturer": "Ford Brazil"
   },
   {
     "WMI": "9BG",
-    "Manufacturer": "ChevroletBrazil"
+    "Manufacturer": "Chevrolet Brazil"
   },
   {
     "WMI": "9BH",
@@ -10245,7 +10245,7 @@
   },
   {
     "WMI": "9BR",
-    "Manufacturer": "ToyotaBrazil"
+    "Manufacturer": "Toyota Brazil"
   },
   {
     "WMI": "9BS",
@@ -10313,7 +10313,7 @@
   },
   {
     "WMI": "93H",
-    "Manufacturer": "HondaBrazil car/SUV"
+    "Manufacturer": "Honda Brazil car/SUV"
   },
   {
     "WMI": "93K",
@@ -10329,7 +10329,7 @@
   },
   {
     "WMI": "93R",
-    "Manufacturer": "ToyotaBrazil"
+    "Manufacturer": "Toyota Brazil"
   },
   {
     "WMI": "93U",
@@ -10445,7 +10445,7 @@
   },
   {
     "WMI": "9GA",
-    "Manufacturer": "ChevroletColombia (GM Colmotores S.A.)"
+    "Manufacturer": "Chevrolet Colombia (GM Colmotores S.A.)"
   },
   {
     "WMI": "9UJ",

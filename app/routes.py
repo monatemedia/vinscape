@@ -125,15 +125,10 @@ def decode_vin(vin):
     wmi = vin[:3]
     region_code = vin[0]
     
-    # 1. Manufacturer/Factory Lookup (WMI: first 3 characters)
-    factory_entry = db.session.scalar(
-        select(WmiFactory).filter_by(wmi=wmi).options(joinedload(WmiFactory.country))
-    )
-    
-    # 2. General Region Info (Based on first VIN character using ISO 3780)
+    # 2. General Region Info (Based on first VIN character using ISO 3780 - This is the FALLBACK/DEFAULT)
     general_region = map_vin_region_to_name(region_code)
     
-    # Build initial result structure
+    # Build initial result structure with ISO fallback region
     result = {
         'vin': vin,
         'wmi': wmi,
@@ -145,24 +140,36 @@ def decode_vin(vin):
         'plant_code': vin[10],
         'serial_number': vin[11:17],
         
-        # This is for the 'Region' box
+        # Default/Fallback Region (e.g., 'Oceania' for '7F...')
         'region': general_region,
-        'region_country': general_region, # Default country name is the region name
-        'region_flag': get_region_image_filename(general_region) # Returns filename
+        'region_country': general_region, 
+        'region_flag': get_region_image_filename(general_region)
     }
 
+    # 1. Manufacturer/Factory Lookup (WMI: first 3 characters)
+    factory_entry = db.session.scalar(
+        select(WmiFactory).filter_by(wmi=wmi).options(joinedload(WmiFactory.country))
+    )
+    
     # --- FACTORY/MANUFACTURER INFO (Based on 3-char WMI) ---
     if factory_entry:
         result['manufacturer'] = factory_entry.name 
 
-        # 1. Determine Country/Flag for the specific Factory (WMI)
+        # Determine Country/Flag for the specific Factory (WMI)
         if factory_entry.country:
-            # Use Country entry linked to the WmiFactory
+            # Found accurate country/region from WMI
             factory_country_name = factory_entry.country.common_name
             factory_flag = factory_entry.country.flag_emoji
             factory_region = factory_entry.country.region 
             
-            # This is also the best source for the main 'Country' field
+            # --- NEW LOGIC: OVERRIDE GENERIC REGION ---
+            # Use the authoritative factory region for the main 'Region' display box
+            result['region'] = factory_region
+            result['region_country'] = factory_region
+            result['region_flag'] = get_region_image_filename(factory_region)
+            # ------------------------------------------
+            
+            # Set the main 'Country' fields
             result['country'] = factory_country_name
             result['country_flag'] = factory_flag
             result['country_region'] = factory_region
@@ -173,12 +180,13 @@ def decode_vin(vin):
             factory_flag = '🏭' # Placeholder
             factory_region = factory_entry.region or result.get('region', 'Unknown Factory Region')
             
-            # Default the main 'Country' fields if no specific country link
-            result['country'] = factory_country_name
-            result['country_flag'] = factory_flag
-            result['country_region'] = factory_region
+            # CRITICAL FIX: If the factory is identified by a region name, use the region image.
+            # Otherwise, default to the factory emoji.
+            factory_flag = get_region_image_filename(factory_country_name)
+            if not factory_flag:
+                factory_flag = '🏭'
 
-        # ASSIGN FACTORY/WMI REGION FIELDS (The field you were debugging)
+        # ASSIGN FACTORY/WMI REGION FIELDS
         result['factory_country'] = factory_country_name
         result['factory_flag'] = factory_flag
         result['factory_region'] = factory_region 
@@ -325,11 +333,8 @@ def api_factories_logos():
     
     return jsonify(factories)
 
-# This route was in your old file but the template wasn't provided.
-# I'm keeping it, but linking it to the new factories.html for now.
 @bp.route('/logo-review')
 def logo_review():
     """Serve the logo review page"""
-    # This just redirects to the /factories route
     from flask import redirect, url_for
     return redirect(url_for('main.factories'))
