@@ -32,9 +32,6 @@ desktop.ini
 .env
 .env.local
 
-# Logos
-/public_data_sources/brands/
-
 # Images
 /public/img/
 
